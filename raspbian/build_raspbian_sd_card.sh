@@ -267,6 +267,7 @@ echo "finishing ${image}"
 if [ "${image}" != "" ]; then
   kpartx -d ${image}
   echo "created image ${image}"
+  mv ${buildenv}/images/raspbian_basic_${deb_release}_${today}.img $CIRCLE_ARTIFACTS/
 fi
 
 echo "done."
